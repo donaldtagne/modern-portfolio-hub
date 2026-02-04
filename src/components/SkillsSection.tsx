@@ -1,11 +1,21 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 
 const skills = {
-  llms: ['Claude', 'GPT-4', 'Gemini', 'Llama 3', 'Mistral', 'Qwen3', 'DeepSeek'],
-  frameworks: ['LangChain', 'LlamaIndex', 'React.js', 'TypeScript', 'Streamlit', 'FastAPI', 'vLLM'],
-  databases: ['FAISS', 'Pinecone', 'Chroma', 'PostgreSQL'],
-  cloud: ['AWS EC2', 'Boto3', 'Docker', 'ngrok', 'HuggingFace'],
-  languages: ['Python', 'TypeScript', 'JavaScript', 'SQL'],
+  llms: [
+    'GPT-4 / OpenAI API', 'Claude', 'Gemini', 'Llama 3', 'Mistral', 'Qwen', 'DeepSeek',
+    'Ollama', 'Hugging Face Transformers', 'Embeddings', 'RAG Architectures',
+    'Tool Calling', 'Function Calling', 'AI Agents', 'Multi-Agent Systems', 'AWS Bedrock'
+  ],
+  frameworks: [
+    'LangChain', 'LangGraph', 'LlamaIndex', 'LangSmith', 'RAGAS', 'DeepEval',
+    'FastAPI', 'Streamlit', 'Gradio', 'Pydantic', 'vLLM', 'MCP (Model Context Protocol)'
+  ],
+  databases: ['PostgreSQL', 'FAISS', 'Pinecone', 'Chroma', 'Weaviate', 'MongoDB', 'Redis'],
+  cloud: [
+    'AWS EC2', 'AWS Lambda', 'AWS S3', 'AWS SageMaker', 'Docker', 'Kubernetes',
+    'GitHub Actions', 'Boto3', 'Hugging Face', 'ngrok'
+  ],
+  languages: ['Python', 'JavaScript', 'TypeScript', 'Java', 'Kotlin', 'Dart', 'Flutter', 'HTML', 'SQL'],
 };
 
 export const SkillsSection = () => {
