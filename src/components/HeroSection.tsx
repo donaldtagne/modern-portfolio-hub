@@ -2,12 +2,19 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { MapPin, Mail, Phone, Github, Linkedin, ArrowDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import profileImage from '@/assets/profile.png';
+import aiBackground from '@/assets/ai-background.jpg';
 
 export const HeroSection = () => {
   const { t } = useLanguage();
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
+      {/* AI Background Image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${aiBackground})` }}
+      />
+      <div className="absolute inset-0 bg-background/70" />
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-glow opacity-50" />
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse-glow" />
