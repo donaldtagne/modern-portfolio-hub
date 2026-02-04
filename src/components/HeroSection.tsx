@@ -1,5 +1,5 @@
 import { useLanguage } from '@/contexts/LanguageContext';
-import { MapPin, Mail, Phone, Github, Linkedin, ArrowDown } from 'lucide-react';
+import { MapPin, Mail, Phone, Github, Linkedin, ArrowDown, Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import profileImage from '@/assets/profile.png';
 import aiBackground from '@/assets/ai-background.jpg';
@@ -68,8 +68,8 @@ export const HeroSection = () => {
                 className="border-primary/30 hover:bg-primary/10"
                 asChild
               >
-                <a href="mailto:donaldtagne516@gmail.com">
-                  <Mail size={18} className="mr-2" />
+                <a href="/Lebenslauf.pdf" download>
+                  <Download size={18} className="mr-2" />
                   {t.hero.resume}
                 </a>
               </Button>
