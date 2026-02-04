@@ -1,5 +1,6 @@
 import { useLanguage } from '@/contexts/LanguageContext';
-import { Award, ExternalLink } from 'lucide-react';
+import { Award, ExternalLink, Download } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 const certificates = [
   {
@@ -51,14 +52,23 @@ export const CertificatesSection = () => {
 
   const title = language === 'de' ? 'Zertifikate' : 'Certificates';
   const verifyText = language === 'de' ? 'Verifizieren' : 'Verify';
+  const downloadText = language === 'de' ? 'Alle Zertifikate herunterladen' : 'Download all certificates';
 
   return (
     <section id="certificates" className="py-24 bg-background">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
-            <span className="text-primary">{title}</span>
-          </h2>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-center">
+              <span className="text-primary">{title}</span>
+            </h2>
+            <Button asChild variant="outline" size="sm" className="gap-2">
+              <a href="/Zertifikate.pdf" download>
+                <Download className="w-4 h-4" />
+                {downloadText}
+              </a>
+            </Button>
+          </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {certificates.map((cert, index) => (
