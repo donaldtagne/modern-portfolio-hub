@@ -2,7 +2,6 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { MapPin, Mail, Phone, Github, Linkedin, ArrowDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import profileImage from '@/assets/profile.png';
-import thesisImage from '@/assets/master-thesis.jpg';
 
 export const HeroSection = () => {
   const { t } = useLanguage();
@@ -16,28 +15,17 @@ export const HeroSection = () => {
       
       <div className="container mx-auto px-6 relative z-10">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
-          {/* Profile Image & Thesis */}
-          <div className="flex flex-col items-center gap-6 animate-slide-up">
-            <div className="relative">
-              <div className="w-64 h-64 lg:w-80 lg:h-80 rounded-full overflow-hidden border-2 border-primary/30 shadow-glow animate-float">
-                <img
-                  src={profileImage}
-                  alt="Donald Tagne"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="absolute -bottom-2 -right-2 w-20 h-20 bg-gradient-primary rounded-full flex items-center justify-center shadow-glow">
-                <span className="text-primary-foreground font-bold text-sm">AI</span>
-              </div>
-            </div>
-            
-            {/* Master Thesis Image */}
-            <div className="relative w-48 lg:w-56 rounded-xl overflow-hidden border border-primary/20 shadow-card hover:shadow-glow transition-all duration-300 hover:scale-105">
+          {/* Profile Image */}
+          <div className="relative animate-slide-up">
+            <div className="w-64 h-64 lg:w-80 lg:h-80 rounded-full overflow-hidden border-2 border-primary/30 shadow-glow animate-float">
               <img
-                src={thesisImage}
-                alt="Master of Science Thesis"
-                className="w-full h-auto object-cover"
+                src={profileImage}
+                alt="Donald Tagne"
+                className="w-full h-full object-cover"
               />
+            </div>
+            <div className="absolute -bottom-2 -right-2 w-20 h-20 bg-gradient-primary rounded-full flex items-center justify-center shadow-glow">
+              <span className="text-primary-foreground font-bold text-sm">AI</span>
             </div>
           </div>
 
