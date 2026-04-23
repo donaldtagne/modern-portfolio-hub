@@ -27,6 +27,18 @@ export const translations = {
       title: 'Berufserfahrung',
       jobs: [
         {
+          company: 'Festanstellung',
+          role: 'AI Solutions Specialist (Vollzeit)',
+          location: 'Bad Kreuznach',
+          period: 'Seit Apr. 2026',
+          highlights: [
+            'Festanstellung als AI Solutions Specialist seit dem 1. April',
+            'Konzeption und Umsetzung von GenAI- & LLM-Lösungen für den produktiven Einsatz',
+            'Identifikation geeigneter KI Use Cases und Übersetzung in skalierbare Architekturen',
+            'Entwicklung von RAG-Systemen, AI Agents und intelligenter Prozessautomatisierung',
+          ],
+        },
+        {
           company: 'Randstad Digital',
           role: 'Masterand – GenAI & LLM Infrastructure',
           location: 'Frankfurt, Eschborn',
@@ -169,6 +181,18 @@ export const translations = {
     experience: {
       title: 'Work Experience',
       jobs: [
+        {
+          company: 'Full-time Position',
+          role: 'AI Solutions Specialist (Full-time)',
+          location: 'Bad Kreuznach, Germany',
+          period: 'Since Apr 2026',
+          highlights: [
+            'Full-time employment as AI Solutions Specialist since April 1st',
+            'Designing and delivering production-ready GenAI & LLM solutions',
+            'Identifying suitable AI use cases and translating them into scalable architectures',
+            'Building RAG systems, AI Agents and intelligent process automation',
+          ],
+        },
         {
           company: 'Randstad Digital',
           role: 'Master Thesis – GenAI & LLM Infrastructure',
