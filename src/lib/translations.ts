@@ -104,6 +104,7 @@ export const translations = {
       categories: {
         llms: 'LLMs & AI',
         frameworks: 'Frameworks',
+        agents: 'AI Agents Frameworks',
         databases: 'Datenbanken',
         cloud: 'Cloud & DevOps',
         languages: 'Sprachen',
@@ -259,6 +260,7 @@ export const translations = {
       categories: {
         llms: 'LLMs & AI',
         frameworks: 'Frameworks',
+        agents: 'AI Agents Frameworks',
         databases: 'Databases',
         cloud: 'Cloud & DevOps',
         languages: 'Languages',
