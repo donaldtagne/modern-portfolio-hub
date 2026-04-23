@@ -1,66 +1,65 @@
 import { useLanguage } from '@/contexts/LanguageContext';
-import { MapPin, Mail, Phone, Github, Linkedin, ArrowDown, Download } from 'lucide-react';
+import { MapPin, Phone, Github, Linkedin, ArrowDown, Download, Sparkles, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import profileImage from '@/assets/profile.png';
-import aiBackground from '@/assets/ai-background.jpg';
 
 export const HeroSection = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
-      {/* AI Background Image */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${aiBackground})` }}
-      />
-      <div className="absolute inset-0 bg-background/70" />
-      {/* Background Effects */}
-      <div className="absolute inset-0 bg-gradient-glow opacity-50" />
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse-glow" />
-      <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-primary/5 rounded-full blur-3xl animate-pulse-glow" style={{ animationDelay: '1.5s' }} />
-      
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
-          {/* Profile Image */}
-          <div className="relative animate-slide-up">
-            <div className="w-64 h-64 lg:w-80 lg:h-80 rounded-full overflow-hidden border-2 border-primary/30 shadow-glow animate-float">
-              <img
-                src={profileImage}
-                alt="Donald Tagne"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="absolute -bottom-2 -right-2 w-20 h-20 bg-gradient-primary rounded-full flex items-center justify-center shadow-glow">
-              <span className="text-primary-foreground font-bold text-sm">AI</span>
-            </div>
-          </div>
+    <section className="relative min-h-screen flex items-center overflow-hidden pt-20 pb-16">
+      {/* Background layers */}
+      <div className="absolute inset-0 grid-pattern" />
+      <div className="absolute inset-0 bg-gradient-glow opacity-60" />
+      <div className="absolute top-1/3 -left-32 w-[28rem] h-[28rem] bg-primary/15 rounded-full blur-[120px] animate-pulse-glow" />
+      <div className="absolute bottom-0 -right-32 w-[24rem] h-[24rem] bg-primary/10 rounded-full blur-[120px] animate-pulse-glow" style={{ animationDelay: '1.5s' }} />
 
+      <div className="container mx-auto px-6 relative z-10">
+        <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Content */}
-          <div className="text-center lg:text-left max-w-2xl">
-            <p className="text-primary font-mono text-sm mb-4 animate-slide-up opacity-0 stagger-1">
+          <div className="lg:col-span-7 order-2 lg:order-1">
+            {/* Status badge */}
+            <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 rounded-full glass animate-slide-up opacity-0 stagger-1">
+              <span className="status-dot" />
+              <span className="text-xs font-mono text-foreground/90">{t.hero.status}</span>
+            </div>
+
+            <p className="text-primary font-mono text-sm mb-3 animate-slide-up opacity-0 stagger-2">
               {t.hero.greeting}
             </p>
-            <h1 className="text-5xl lg:text-7xl font-bold mb-4 animate-slide-up opacity-0 stagger-2">
-              Donald <span className="text-gradient">Tagne</span>
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold mb-6 animate-slide-up opacity-0 stagger-2 leading-[1.05]">
+              Donald
+              <br />
+              <span className="text-gradient">Tagne</span>
             </h1>
-            <h2 className="text-2xl lg:text-3xl text-muted-foreground font-light mb-6 animate-slide-up opacity-0 stagger-3">
-              {t.hero.role}
-            </h2>
-            
-            <div className="flex items-center justify-center lg:justify-start gap-2 text-muted-foreground mb-8 animate-slide-up opacity-0 stagger-4">
+
+            <div className="flex items-center gap-3 mb-6 animate-slide-up opacity-0 stagger-3">
+              <Sparkles size={18} className="text-primary" />
+              <h2 className="text-xl lg:text-2xl text-foreground/90 font-medium">
+                {t.hero.role}
+              </h2>
+            </div>
+
+            <p className="text-lg text-muted-foreground max-w-xl mb-8 leading-relaxed animate-slide-up opacity-0 stagger-4">
+              {t.hero.tagline}
+            </p>
+
+            <div className="flex items-center gap-2 text-muted-foreground mb-8 animate-slide-up opacity-0 stagger-4">
               <MapPin size={16} className="text-primary" />
-              <span>{t.hero.location}</span>
+              <span className="text-sm">{t.hero.location}</span>
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 mb-8 animate-slide-up opacity-0 stagger-5">
+            <div className="flex flex-wrap items-center gap-4 mb-8 animate-slide-up opacity-0 stagger-5">
               <Button
                 size="lg"
                 className="bg-gradient-primary hover:opacity-90 text-primary-foreground font-semibold shadow-glow"
                 asChild
               >
-                <a href="#contact">{t.hero.cta}</a>
+                <a href="#contact">
+                  <Mail size={18} className="mr-2" />
+                  {t.hero.cta}
+                </a>
               </Button>
               <Button
                 size="lg"
@@ -76,37 +75,72 @@ export const HeroSection = () => {
             </div>
 
             {/* Social Links */}
-            <div className="flex items-center justify-center lg:justify-start gap-4 animate-slide-up opacity-0 stagger-5">
+            <div className="flex items-center gap-3 animate-slide-up opacity-0 stagger-5">
               <a
                 href="https://github.com/donaldtagne"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 rounded-full bg-secondary hover:bg-primary/20 transition-colors group"
+                aria-label="GitHub"
+                className="p-3 rounded-full glass hover:bg-primary/10 hover:border-primary/40 transition-all group"
               >
-                <Github size={20} className="text-muted-foreground group-hover:text-primary transition-colors" />
+                <Github size={18} className="text-muted-foreground group-hover:text-primary transition-colors" />
               </a>
               <a
                 href="https://www.linkedin.com/in/chris516/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 rounded-full bg-secondary hover:bg-primary/20 transition-colors group"
+                aria-label="LinkedIn"
+                className="p-3 rounded-full glass hover:bg-primary/10 hover:border-primary/40 transition-all group"
               >
-                <Linkedin size={20} className="text-muted-foreground group-hover:text-primary transition-colors" />
+                <Linkedin size={18} className="text-muted-foreground group-hover:text-primary transition-colors" />
               </a>
               <a
                 href="tel:01788195598"
-                className="p-3 rounded-full bg-secondary hover:bg-primary/20 transition-colors group"
+                aria-label="Phone"
+                className="p-3 rounded-full glass hover:bg-primary/10 hover:border-primary/40 transition-all group"
               >
-                <Phone size={20} className="text-muted-foreground group-hover:text-primary transition-colors" />
+                <Phone size={18} className="text-muted-foreground group-hover:text-primary transition-colors" />
               </a>
+            </div>
+          </div>
+
+          {/* Profile Image */}
+          <div className="lg:col-span-5 order-1 lg:order-2 flex justify-center lg:justify-end">
+            <div className="relative animate-slide-up">
+              {/* Decorative gradient ring */}
+              <div className="absolute -inset-4 bg-gradient-primary rounded-3xl blur-2xl opacity-30 animate-pulse-glow" />
+              <div className="absolute -inset-1 bg-gradient-primary rounded-3xl opacity-60" />
+
+              <div className="relative w-72 h-96 sm:w-80 sm:h-[28rem] lg:w-[22rem] lg:h-[30rem] rounded-3xl overflow-hidden border border-primary/20 shadow-glow">
+                <img
+                  src={profileImage}
+                  alt="Donald Tagne — AI Solutions Specialist"
+                  className="w-full h-full object-cover"
+                />
+                {/* Gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
+              </div>
+
+              {/* Floating badge */}
+              <div className="absolute -bottom-4 -left-4 glass rounded-2xl px-4 py-3 shadow-card animate-float">
+                <div className="flex items-center gap-2">
+                  <div className="w-10 h-10 rounded-xl bg-gradient-primary flex items-center justify-center">
+                    <span className="text-primary-foreground font-bold text-xs">AI</span>
+                  </div>
+                  <div>
+                    <p className="text-xs text-muted-foreground font-mono">Specialist</p>
+                    <p className="text-sm font-semibold">GenAI · LLM · RAG</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
         {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-          <a href="#about" className="text-muted-foreground hover:text-primary transition-colors">
-            <ArrowDown size={24} />
+        <div className="hidden md:block absolute bottom-6 left-1/2 -translate-x-1/2 animate-bounce">
+          <a href="#about" aria-label="Scroll to about" className="text-muted-foreground hover:text-primary transition-colors">
+            <ArrowDown size={22} />
           </a>
         </div>
       </div>
