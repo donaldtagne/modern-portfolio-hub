@@ -12,9 +12,11 @@ export const translations = {
     hero: {
       greeting: 'Hallo, ich bin',
       role: 'AI Solutions Specialist',
-      location: 'Worms, Deutschland',
+      location: 'Bad Kreuznach, Deutschland',
       cta: 'Kontakt aufnehmen',
       resume: 'Lebenslauf',
+      status: 'Fest angestellt seit 1. April',
+      tagline: 'Ich entwickle produktionsreife GenAI- & LLM-Lösungen, die echten Business-Mehrwert schaffen.',
     },
     about: {
       title: 'Über mich',
@@ -153,9 +155,11 @@ export const translations = {
     hero: {
       greeting: "Hi, I'm",
       role: 'AI Solutions Specialist',
-      location: 'Worms, Germany',
+      location: 'Bad Kreuznach, Germany',
       cta: 'Get in Touch',
       resume: 'Resume',
+      status: 'Full-time employed since April 1st',
+      tagline: 'I build production-ready GenAI & LLM solutions that deliver real business value.',
     },
     about: {
       title: 'About Me',
