@@ -10,6 +10,11 @@ const skills = {
     'LangChain', 'LangGraph', 'LlamaIndex', 'LangSmith', 'RAGAS', 'DeepEval',
     'FastAPI', 'Streamlit', 'Gradio', 'Pydantic', 'vLLM', 'MCP (Model Context Protocol)'
   ],
+  agents: [
+    'LangGraph', 'CrewAI', 'AutoGen', 'LlamaIndex Agents', 'OpenAI Agents SDK',
+    'Semantic Kernel', 'Haystack Agents', 'Smolagents', 'MCP (Model Context Protocol)',
+    'Tool Calling', 'Multi-Agent Orchestration'
+  ],
   databases: ['PostgreSQL', 'FAISS', 'Pinecone', 'Chroma', 'Weaviate', 'MongoDB', 'Redis'],
   cloud: [
     'AWS EC2', 'AWS Lambda', 'AWS S3', 'AWS SageMaker', 'Docker', 'Kubernetes',
@@ -24,6 +29,7 @@ export const SkillsSection = () => {
   const categories = [
     { key: 'llms', skills: skills.llms },
     { key: 'frameworks', skills: skills.frameworks },
+    { key: 'agents', skills: skills.agents },
     { key: 'databases', skills: skills.databases },
     { key: 'cloud', skills: skills.cloud },
     { key: 'languages', skills: skills.languages },
